@@ -1,4 +1,5 @@
-2.2.2  Ìí¼Ó°´Å¥
+### 2.2.2  åˆ›å»ºåŠ è½½å¸ƒå±€
+```
 :first_layout.xml
   <Button
             android:id="@+id/button_1"
@@ -6,16 +7,18 @@
             android:layout_height="wrap_content"
             android:text="Button 1"/>
             
-:AanroidMainfest.xml ×¢²á
+:AanroidMainfest.xml ×¢ï¿½ï¿½
   <activity android:name=".FirstActivity">
       <intent-filter>
           <action android:name="android.intent.action.MAIN" />
               <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
   </activity>
-  
+```
 
-2.2.4 ¸ø°´Å¥Ìí¼Ótoast
+
+### 2.2.4 åœ¨æ´»åŠ¨ä¸­ä½¿ç”¨toast
+```
 :FirstActivity.kt
   setContentView(R.layout.first_layout)
         button_1.setOnClickListener {
@@ -25,9 +28,10 @@
                 Toast.LENGTH_SHORT
             ).show()
         }
-       
+```      
         
-2.2.5 ÔÚ»î¶¯ÖĞÊ¹ÓÃmenu
+### 2.2.5 åœ¨æ´»åŠ¨ä¸­ä½¿ç”¨menu
+```
 :main.xml
 <item
     android:id="@+id/add_item"
@@ -35,9 +39,9 @@
 <item
     android:id="@+id/remove_item"
     android:title="Remove" />
-    
+
 :FirstActivity.kt
-¡¤¡¤¡¤ ¡¤¡¤¡¤
+Â·Â·Â· Â·Â·Â·
 override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main, menu)
         return true
@@ -50,12 +54,31 @@ override fun onOptionsItemSelected(item: MenuItem?): Boolean {
       }
       return true
   }
+```  
+
   
-  
-2.2.6 Ïú»ÙÒ»¸ö»î¶¯
+### 2.2.6 é”€æ¯ä¸€ä¸ªæ´»åŠ¨
+```
 :FirstActivity.kt
-¡¤¡¤¡¤
+Â·Â·Â·
 button_1.setOnClickListener {
     finish()
 }
-¡¤¡¤¡¤
+Â·Â·Â·
+```
+
+
+### 2.3.1 æ˜¾å¼Intent
+```
+val intent = Intent()
+intent.setClass(this, SecondActivity :: class.java)
+startActivity(intent)
+```
+
+
+### 2.3.2 éšå¼Intent
+```
+val intent = Intent()
+intent.setAction("ACTION_START")
+startActivity(intent)
+```
